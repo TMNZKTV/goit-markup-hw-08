@@ -1,0 +1,41 @@
+
+body {
+  background-color: $primary-white-color;
+  font-family: $main-font;
+  font-size: $main-size;
+  font-style: $normal-style;
+  font-weight: $regular;
+  color: $primary-text-color;
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+.list {
+  list-style-type: none;
+}
+.button {
+  color: $primary-white-color;
+  background-color: $accent-color;
+  text-decoration: none;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.flexbox {
+  display: flex;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
+}

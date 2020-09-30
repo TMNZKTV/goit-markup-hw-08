@@ -1,0 +1,31 @@
+.address {
+    display: flex;
+    flex-direction: column;
+}
+
+.address_container {
+    box-sizing: border-box;
+}
+
+.address__points {
+    display: flex;
+    flex-direction: column;
+}
+
+.address__map {
+    color: $primary-white-color;
+    font-style: $normal-style;
+    margin: 0 0 9px 0;
+}
+
+.address__link {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: $footer-link-color;
+    transition: color $duration $bezier;
+
+        &:hover,
+        &:focus {
+        color: $accent-color;
+        }
+}

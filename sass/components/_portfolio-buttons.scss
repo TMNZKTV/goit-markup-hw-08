@@ -1,0 +1,40 @@
+.buttons--container {
+    justify-content: center;
+}
+
+.buttons__list {
+    display: flex;
+    margin: 0;
+    padding: 94px 0 50px 0;
+}
+
+.buttons__item {
+    flex-direction: row;
+    
+        &:not(:last-child) {
+            margin-right: 9px;
+        }
+}
+
+.button--portfolio {
+    color: $primary-text-color;
+    background-color: $secondary-background-color;
+    font-weight: $medium;
+    font-size: $description-size;
+    line-height: 1.6;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 6px 22px;
+    min-width: 70px;
+    border: 1px solid transparent;
+    transition: color, background-color, $duration $bezier;
+
+        &:hover,
+        &:focus {
+            color: $primary-white-color;
+            background-color: $accent-color;
+        }
+}
+
+
+  

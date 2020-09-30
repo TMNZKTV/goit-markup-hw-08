@@ -1,0 +1,24 @@
+.webstudio {
+    display: flex;
+    text-decoration: none;
+    margin-right: 93px;
+    padding: 0;
+    align-items: center;
+}
+
+.webstudio__text {
+    display: flex; 
+    font-family: $logo-font;
+    font-weight: $bold;
+    font-size: $logo-font-size;
+    line-height: 1.2; 
+    margin: 0;
+}
+
+.webstudio__web-color {
+    color: $accent-color;
+}
+
+.webstudio__studio-color {
+    color: $primary-text-color;
+}
