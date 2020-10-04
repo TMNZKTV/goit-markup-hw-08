@@ -1,31 +1,68 @@
 .address {
+    margin-bottom: 60px;
+    justify-content: center;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 76px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.address_container {
-    box-sizing: border-box;
-}
+
 
 .address__points {
-    display: flex;
-    flex-direction: column;
+
+    @media screen and (min-width: 768px) and (max-widht: 1199px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .address__map {
     color: $primary-white-color;
     font-style: $normal-style;
-    margin: 0 0 9px 0;
+    margin: 0 0 8px 0;
+
 }
 
 .address__link {
-    display: inline-block;
-    margin-bottom: 9px;
+    display: block;
     color: $footer-link-color;
     transition: color $duration $bezier;
 
         &:hover,
         &:focus {
         color: $accent-color;
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            margin-bottom: 8px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            display: flex;
+            margin-bottom: 8px;
+            align-items: center;
+        }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 9px;
         }
 }

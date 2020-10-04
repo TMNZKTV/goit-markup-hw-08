@@ -4,59 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="./css/main.min.css"/>
   </head>
   <body class="page">
       <!-- Page Header -->
       <header class="page__header">
         <!-- Navigation -->
-        <div class="container flexbox">
+        <div class="container">
               <nav class="navigation">
                 <a href="./" class="webstudio">
                   <p class="webstudio__text">
                     <span class="webstudio__web-color">Web</span><span class="webstudio__studio-color">Studio</span>
                   </p>
                 </a>
-                <ul class="menu">
-                  <li class="menu__item"><a href="./index.html" class="menu__link link current">Студия</a></li>
-                  <li class="menu__item"><a href="./portfolio.html" class="menu__link link">Портфолио</a></li>
-                  <li class="menu__item"><a href="/" class="menu__link link">Контакты</a></li>
-                </ul>
-              </nav>
+                
+                <button type="button" 
+                class="menu__button" 
+                aria-expanded="false" 
+                aria-controls="menu__container"
+                data-menu-button>
+                  <svg class="menu__burger" aria-label="Переключатель мобильного меню">
+                    <use class="icon__close" href="./img/burger-menu.svg#icon-close_24px"></use>
+                    <use class="icon__menu " href="./img/burger-menu.svg#icon-menu_24px"></use>
+                  </svg>
+                </button>
+                
+                <div class="menu__container" id="menu__container" data-menu>
+                  
+                  <!-- Menu -->
+                  <ul class="menu">
+                    <li class="menu__item"><a href="./index.html" class="menu__link link current">Студия</a></li>
+                    <li class="menu__item"><a href="./portfolio.html" class="menu__link link">Портфолио</a></li>
+                    <li class="menu__item"><a href="/" class="menu__link link">Контакты</a></li>
+                  </ul>
 
-              <!-- Contacts  -->
-                <ul class="contacts">
-                  <li class="contacts__item">
-                    <a href="mailto:info@devstudio.com" class="contacts__link link">
-                      <svg class="contacts__icon icon--envelope">
-                        <use href="./img/sprite.svg#icon-envelope"></use>
-                      </svg>
-                      info@devstudio.com
-                    </a>
-                  </li>
-                  <li class="contacts__item">
-                    <a href="callto:+380961111111" class="contacts__link link">
-                      <svg class="contacts__icon icon--smartphone">
-                        <use href="./img/sprite.svg#icon-smartphone"></use>
-                      </svg>
-                      +38 096 111 11 11
-                    </a>
-                  </li>
-                </ul>
+                  <!-- Contacts  -->
+                  <ul class="contacts">
+                   <li class="contacts__item">
+                      <a href="mailto:info@devstudio.com" class="contacts__link link">
+                        <svg class="contacts__icon icon--envelope">
+                          <use href="./img/sprite.svg#icon-envelope"></use>
+                       </svg>
+                        info@devstudio.com
+                      </a>
+                    </li>
+                    <li class="contacts__item">
+                     <a href="callto:+380961111111" class="contacts__link link">
+                        <svg class="contacts__icon icon--smartphone">
+                         <use href="./img/sprite.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav> 
         </div> 
       </header>
 
     <main>
       <!-- Block Hero -->
       <section class="hero">
-            <div class="hero__overlay">
+       
+        <div class="hero__overlay">
               <h1 class="hero__title">
                 Эффективные решения <br />
                 для вашего бизнеса
               </h1>
-              <button class="button hero--button" data-modal-open>Заказать услугу</button>
-            </div>
+              <div class="hero__button">
+                <button class="button hero--button" data-modal-open>Заказать услугу</button>
+              </div>
+        </div>
+           
       </section>
 
       <!-- Work Features -->
@@ -242,7 +261,7 @@
                   </li>
 
                   <li class="team__item">
-                      <img class="img" src="./img/member4.jpg" alt="UI Designer" width="270"/>
+                      <img class="img team__img" src="./img/member4.jpg" alt="UI Designer" width="270"/>
                       <h3 class="team__member">Михаил Ермаков</h3>
                       <p class="team__text">UI Designer</p>
                       <ul class="icon-list list">
@@ -341,7 +360,7 @@
 
     <!-- Page Footer -->
       <footer class="page__footer">
-        <div class="container flexbox">
+        <div class="container footer--container">
             <div class="address">
               <!-- Logo -->
                 <a href="/" class="webstudio webstudio--footer">
@@ -453,10 +472,14 @@
               <label class="policy__checkbox checkbox--custom" for="checkbox">Соглашаюсь с рассылкой и принимаю <a href="./" class="checkbox__link">Условия договора</a></label>
             </div>
 
-            <button type="submit" class="button sent--modal">Отправить</button>
+            <div class="form__button">
+              <button type="submit" class="button sent--modal">Отправить</button>
+            </div>
           </form>
         </div>
       </div> 
-      <script src="./js/script.js"></script>
+    
+    <script src="./js/script.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

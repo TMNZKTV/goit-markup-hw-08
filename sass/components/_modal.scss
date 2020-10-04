@@ -13,12 +13,13 @@
     height: 100%;
     background-color: $backdrop-color;
     overflow: auto;
+    overflow-y: scroll;
 }
 
 .modal {
     width: 100%;
-    max-width: 528px;
-    min-height: 581px;
+    max-width: 450px;
+    max-height: 609px;
     border-radius: 4px;
     background-color: $primary-white-color;
     top: 50%;
@@ -30,6 +31,11 @@
         .is-hidden & {
             transform: translate(-50%, -50%) scale(0);
         }
+
+
+    @media screen and (min-width: 1200px) {
+        max-width: 528px;
+    }
 }
 
 .modal__button {
@@ -60,12 +66,11 @@
         }
 }
   
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+// .form {
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+// }
 .form__label {
     display: inline-block;
     margin-right: auto;
@@ -77,7 +82,7 @@
   
 .form__input {
     display: block;
-    width: 448px;
+    width: 100%;
     height: 40px;
     margin-bottom: 10px;
     padding-left: 30px;
@@ -94,9 +99,10 @@
 }
   
 textarea {
+    display: block;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    width: 448px;
+    width: 100%;
     height: 120px;
     padding: 12px;
     transition: outline-color $duration $bezier;
@@ -121,9 +127,9 @@ textarea {
 }
 
 .policy__checkbox {
+    font-size: 12px;
+    color: $secondary-text-color;
     line-height: 1.7;
-    margin: 0;
-
         &::before {
             display: inline-block;
             content: "";
@@ -131,26 +137,40 @@ textarea {
             height: 15px;
             vertical-align: middle;
             border: 2px solid $primary-text-color; 
-            margin-right: 7px;
+            margin-right: 5px;
             transition: $duration $bezier;
         }
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
 }
 
 .checkbox__link {
     color: $accent-color;
+    font-size: 12px;
+    line-height: 1.7;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
 }
   
 .modal__text {
     display: inline-block;
     padding: 0;
     margin: 0 0 12px 0;
-    width: 448px;
+    width: 100%;
     font-size: $modal-size;
     font-weight: $bold;
     line-height: 1.7;
     text-align: center;
     vertical-align: middle;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {
+        line-height: 1.2;
+    }
 }
 
 .form__icon {
@@ -163,21 +183,24 @@ textarea {
 }
   
 .policy {
-    display: flex;
-    justify-content: center;
-    margin: 17px 0 30px 0;
+    margin: 20px 0 0 0;
+    text-align: center;
+    
 }
   
-.sent--modal {
-    display: inline-block;
-    min-width: 200px;
+.form__button {
+    display: flex;	
+    justify-content: center;
+    margin: 31px 0 0 0;
+}
+.button.sent--modal {
+    max-width: 200px;
     height: 50px;
     font-weight: $bold;
     font-size: $description-size;
     line-height: 1.8;
     letter-spacing: 0.06em;
     vertical-align: middle;
-    text-align: center;
     padding: 10px 55px;
     background-color: $accent-color;
     color: $primary-white-color;

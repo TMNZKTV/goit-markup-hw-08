@@ -1,16 +1,29 @@
 .webstudio {
-    display: flex;
+    display: inline-block;
     text-decoration: none;
-    margin-right: 93px;
     padding: 0;
     align-items: center;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        font-size: 24px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-size: 24px;
+        display: flex;
+        margin-right: 88px;
+        align-items: center;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        display: flex;
+        margin-right: 93px;
+    }
 }
 
 .webstudio__text {
-    display: flex; 
+    display: inline-block;
     font-family: $logo-font;
     font-weight: $bold;
-    font-size: $logo-font-size;
     line-height: 1.2; 
     margin: 0;
 }

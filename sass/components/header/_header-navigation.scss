@@ -1,26 +1,52 @@
 .navigation {
     display: flex;
+
+    @media screen and (min-widht: 768px) {
+        align-items: center;
+    }
 }
+
 .menu {
-    display: flex;
     align-items: center;
+    padding: 0;
+    margin: 0;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-right: 84px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 305px;
+    }
 }
 .menu__item {
     display: block;
+    align-items: center;
     font-weight: $medium;
     line-height: 1.4;
     list-style-type: none;
-    margin: 0;
-
-    &:not(:last-child) {
-        margin-right: 50px;
+   
+    @media screen and (max-width: 767px) {
+        font-size: 18px;
+        font-weight: $medium;
+        margin-bottom: 40px;
     }
     
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+
+        &:not(:last-child) {
+        margin-right: 50px;
+        }   
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
 }
 .menu__link {
     text-decoration: none;
     color: $primary-text-color;
-    padding: 32px 0;
     transition: color $duration $bezier;
         
         &.current {
