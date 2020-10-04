@@ -514,6 +514,12 @@ img {
 .menu__burger {
   width: 18.67px;
   height: 18.67px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button:hover .menu__burger .menu-button:focus .menu__burger {
+  fill: #2196F3;
 }
 
 .menu__button {
@@ -528,6 +534,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu__button:hover, .menu__button:focus {
+  fill: #2196F3;
 }
 
 @media screen and (min-width: 768px) {
@@ -832,21 +842,52 @@ img {
 
 .hero__overlay {
   max-width: 1600px;
-  height: 600px;
+  max-height: 600px;
   margin-left: auto;
   margin-right: auto;
   padding: 118px 0;
   background-color: #2F303A;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/img/hero-background.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/hero-background.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/img/hero-480.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/img/hero-480.jpg");
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: center;
+  background-size: cover;
   text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
   .hero__overlay {
     padding: 200px 0;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: url("/img/hero-480@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__overlay {
+    background-image: url("/img/hero-768.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: url("/img/hero-768@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__overlay {
+    background-image: url("/img/hero-1200.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: url("/img/hero-1200@2x.jpg");
   }
 }
 
@@ -1069,6 +1110,12 @@ img {
   padding: 60px 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
+}
+
 .team__title {
   font-weight: 700;
   line-height: 1.2;
@@ -1117,12 +1164,17 @@ img {
 }
 
 .team__item {
-  margin: 0 0 30px 0;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   padding: 0 0 30px 0;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -2051,6 +2103,12 @@ textarea:focus {
   background-color: #FFFFFF;
   border: 1px solid #EEEEEE;
   overflow: hidden;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .grid__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {

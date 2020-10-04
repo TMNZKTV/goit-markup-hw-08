@@ -23,6 +23,11 @@
 } 
 .grid__item {
 
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: calc((100% - 30px) / 2);
         margin-right: 30px;
