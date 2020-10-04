@@ -71,6 +71,17 @@
         right: 0;
         bottom: -10px;
         background-color: $accent-color;
+
+            
+            
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                bottom: -40px;
+            }
+            @media screen and (min-width: 1200px) {
+                bottom: -30px;
+            }
         }
+
+        
 }
 

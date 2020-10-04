@@ -742,6 +742,18 @@ img {
   background-color: #2196F3;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .link.current::after {
+    bottom: -40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .link.current::after {
+    bottom: -30px;
+  }
+}
+
 .contacts {
   font-family: Roboto, sans-serif;
   font-weight: 500;
