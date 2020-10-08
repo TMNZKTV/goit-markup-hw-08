@@ -1,19 +1,12 @@
 .address {
     margin-bottom: 60px;
-    justify-content: center;
-
-    @media screen and (min-width: 480px) and (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        
-    }
+    text-align: center;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 0 0 76px;
+    align-items: center;
     }
 
     @media screen and (min-width: 1200px) {
@@ -25,15 +18,14 @@
 
 
 .address__points {
-
-    @media screen and (min-width: 768px) and (max-widht: 1199px) {
-        display: flex;
-        flex-direction: column;
-    }
+    text-align: center;
+    align-items: center;
 
     @media screen and (min-width: 1200px) {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 }
 
@@ -58,9 +50,8 @@
             margin-bottom: 8px;
         }
         @media screen and (min-width: 768px) and (max-width: 1199px) {
-            display: flex;
             margin-bottom: 8px;
-            align-items: center;
+        
         }
         @media screen and (min-width: 1200px) {
             margin-bottom: 9px;
