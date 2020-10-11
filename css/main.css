@@ -2160,10 +2160,6 @@ textarea:focus {
   text-decoration: none;
   margin: 0;
   border: 1px solid #EEEEEE;
-  -webkit-transition: -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product__link:hover, .product__link:focus {
