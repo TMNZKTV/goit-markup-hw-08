@@ -19,7 +19,6 @@
     
 } 
 .grid__item {
-    overflow: hidden;
     border: 1px solid $grid-item-border;
 
     @media screen and (min-width: 480px) and (max-width: 767px) {
